@@ -3,7 +3,7 @@ manifest:
     - name: AtleMolholm
       url-base: https://github.com/AtleMolholm
   projects:
-    - name: corne2
+    - name: zmk
       remote: AtleMolholm
       revision: main
       import: app/west.yml
