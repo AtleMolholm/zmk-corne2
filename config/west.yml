@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: corne2
       remote: AtleMolholm
-      revision: Update west.yml
+      revision: main
       import: app/west.yml
   self:
     path: config
