@@ -18,14 +18,14 @@
 
                         bindings = <
 // |---------|---------|---------|---------|---------|---------|----|---------|---------|---------|---------|---------|---------|
-// |   TAB   |   Q     |   W     |   E     |   R     |   T     |    |   Y     |   U     |   I     |   O     |   P     |   Å     |
+// |   TAB   |   Q     |   W     |   E     |   R     |   T     |    |   Y     |   U     |   I     |   O     |   P     |   Ã…     |
    &kp TAB   &kp Q     &kp W     &kp E     &kp T     &kp R          &kp Y     &kp U     &kp I     &kp O     &kp P     &kp BSPC
-// |    CTRL |   A     |   S     |   D     |   F     |   G     |    |   H     |   J     |   K     |   L     |   Ø     |   Æ     |
+// |    CTRL |   A     |   S     |   D     |   F     |   G     |    |   H     |   J     |   K     |   L     |   Ã˜     |   Ã†     |
    &kp LCTRL &kp A     &kp S     &kp D     &kp F     &kp G          &kp H     &kp J     &kp K     &kp L     &kp SEMI  &kp SQT
 // |    SHFT |   Z     |   X     |   C     |   V     |   B     |    |   N     |   M     |   ,     |   .     |   -     |   RSHFT |
    &kp LSHFT &kp Z     &kp X     &kp C     &kp V     &kp B          &kp N     &kp M     &kp COMMA &kp DOT   &kp MINUS &kp RSHFT
 //                    |    GUI |       |   ENT |   |    SPC  |       |   BSPC |
-                      &kp LGUI &mo LOW &kp RET     &kp SPACE &mo RSE &kp BSPC
+                      &kp LGUI &mo 1 &kp RET     &kp SPACE &mo 2 &kp BSPC
                         >;
                 };
                 lower_layer {
