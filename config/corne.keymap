@@ -80,7 +80,7 @@
 
 
 / {
-    behaviors {//not_in_use
+    /*behaviors {//not_in_use
         #include "behaviors_mod_morph.dtsi"
 
         shft_caps: tap_dance_shift_caps_lock_toggle {
@@ -90,7 +90,7 @@
             tapping-term-ms = <200>;
             bindings = <&kp LSHFT>, <&kp CAPS>;
         };
-    };
+    };*/
 
     keymap {
         compatible = "zmk,keymap";
