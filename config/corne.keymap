@@ -49,29 +49,6 @@
 #define xxx &none
 #define ___ &trans
 
-
-#define SI_BASE_LIN 0  // Base layer, host layout: SI, Linux host
-#define SI_BASE_WIN 1  // Base layer, host layout: SI, Windows host
-#define SI_SYM_LIN  2  // Symbols layer, host layout: SI, Linux host
-#define SI_SYM_WIN  3  // Symbols layer, host layout: SI, Windows host
-#define L_EXT1_LIN  4  // Extend layer 1: Linux host
-#define L_EXT1_WIN  5  // Extend layer 1: Windows host
-#define L_EXT2_LIN  6  // Extend layer 2: Linux host
-#define L_EXT2_WIN  7  // Extend layer 2: Windows host
-#define AOE_BASE    8  // Base AoE layer, host layout: SI, Windows host
-#define AOE_SYM     9  // Symbols AoE layer, host layout: SI, Windows host
-#define L_ZMK      10  // ZMK layer
-
-#define _MIC_MUTE_WIN  LG(LS(SI_A))
-#define _TOLDSK LG(LC(LEFT))   // Move to left desktop on Windows (WIN + CTRL + LEFT)
-#define _TORDSK LG(LC(RIGHT))  // Move to right desktop on Windows (WIN + CTRL + RIGHT)
-
-// Go to ZMK layer when holding TAB key
-// On tap: TAB
-// On hold: L_ZMK (ZMK layer)
-#define TAB_L_ZMK  &lt L_ZMK TAB
-
-
 // https://zmk.dev/docs/features/debouncing
 &kscan0 {
     debounce-press-ms = <3>;    // Default is 5 ms
@@ -80,17 +57,7 @@
 
 
 / {
-    /*behaviors {//not_in_use
-        #include "behaviors_mod_morph.dtsi"
 
-        shft_caps: tap_dance_shift_caps_lock_toggle {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAB_DANCE_SHIFT_CAPS_LOCK_TOGGLE";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&kp CAPS>;
-        };
-    };*/
 
     keymap {
         compatible = "zmk,keymap";
@@ -133,18 +100,6 @@
                       &kp LGUI   ___  &kp RET     &kp SPACE   ___  &kp BSPC
                         >;
                 };
-/*        zmk_layer {
-// -----------------------------------------------------------------------------------------
-// | XXX  | BT 0  | BT 1   | BT 2   | BT 3   | BT 4   |        |       |           |           |      |      |      |
-// |      | BTCLR |        | EP ON  | EP OFF | Reset  |        |       | To SI WIN | To SI WIN |      |      |      |
-// |      |       |        |        |        | Bootl  |        |       |           |           |      |      |      |
-//                         |        |        |        |        |       |           |           |
-            bindings = <
-   xxx &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4     xxx xxx             xxx             xxx          xxx xxx
-   xxx &bt BT_CLR   xxx          &ext_power EP_ON &ext_power EP_OFF &sys_reset       xxx &to SI_BASE_LIN &to SI_BASE_WIN &to AOE_BASE xxx xxx
-   xxx xxx          xxx          xxx              xxx               &bootloader      xxx xxx             xxx             xxx          xxx xxx
-                                 xxx              xxx               xxx              xxx xxx             xxx
-            >;
-        };*/
+
     };
 };
