@@ -2,20 +2,86 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
+ *
+ * @bzgec : isyatsyso
+ ***************************************************************************************************
+ * norwegian qwerty in base, with persnal flavour for add layers
+ ***************************************************************************************************
+ * Host layout: SI *
+ ***************************************************************************************************
+ * ZMK layer: (note: maybe)
+ ***************************************************************************************************
+ *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
+ *  | XXX    | BT 0   | BT 1   | BT 2   | BT 3   | BT 4   |             |        |        |        |        |        |        |
+ *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
+ *  |        | BT CLR |        | EP ON  | EP OFF | Reset  |             |        | To SI  | To SI  | To AoE |        |        |
+ *  |        |        |        |        |        |        |             |        | Linux  | Win    |        |        |        |
+ *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
+ *  |        |        |        |        |        | Bootl  |             |        |        |        |        |        |        |
+ *  +--------+--------+--------+----+---+----+---+----+---+----+   +----+---+----+---+----+---+----+--------+--------+--------+
+ *                                  |        |        |        |   |        |        |        |
+ *                                  +--------+--------+--------+   +--------+--------+--------+
+ *
+ * - `BT 0-4`: Select the x bluetooth profile
+ * - `BT CLR`: Clear bond between the keyboard and the host for the selected profile
+ * - `Reset`: Reset this side of the keyboard
+ * - `Bootl`: Reset this side of the keyboard to bootloader mode
+ * - `EP ON`: Enable external power (enable VCC power output)
+ * - `To SI Linux`: Switch keyboard layout to match SI host layout, Linux host
+ * - `To SI Win`: Switch keyboard layout to match SI host layout, Windows host
+ * - `EP OFF`: Disable external power (disable VCC power output)
+ *
+ * - Difference between "SI Linux" and "SI Windows" is in how a few special characters
+ *   are implemented but for the end use there should be no difference
+ *
+ *   - `no_n6_lin`    -> `no_n6_win` (`^`)
+ *   - `no_grave_lin` -> `no_grave_win` (`\``, `~`)
+ *
+ ***************************************************************************************************
  */
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include "keys_no.h"
 
+
+#define xxx &none
 #define ___ &trans
 
+
+#define _TOLDSK LG(LC(LEFT))   // Move to left desktop on Windows (WIN + CTRL + LEFT)
+#define _TORDSK LG(LC(RIGHT))  // Move to right desktop on Windows (WIN + CTRL + RIGHT)
+
+// Go to ZMK layer when holding TAB key
+// On tap: TAB
+// On hold: L_ZMK (ZMK layer)
+//#define TAB_L_ZMK  &lt L_ZMK TAB
+
+
+// https://zmk.dev/docs/features/debouncing
+&kscan0 {
+    debounce-press-ms = <3>;    // Default is 5 ms
+    debounce-release-ms = <4>;  // Default is 5 ms
+};
+
+
 / {
-        keymap {
-                compatible = "zmk,keymap";
+    behaviors {//not_in_use
+        #include "behaviors_mod_morph.dtsi"
 
-                default_layer {
+        shft_caps: tap_dance_shift_caps_lock_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_DANCE_SHIFT_CAPS_LOCK_TOGGLE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
+        };
+    };
 
+    keymap {
+        compatible = "zmk,keymap";
+                default_layer {	
                         bindings = <
 // |---------|---------|---------|---------|---------|---------|----|---------|---------|---------|---------|---------|---------|
 // |   TAB   |   Q     |   W     |   E     |   R     |   T     |    |   Y     |   U     |   I     |   O     |   P     |   Å     |
@@ -41,7 +107,6 @@
                       &kp LGUI   ___  &kp RET     &kp SPACE   ___  &kp BSPC
                         >;
                 };
-
                 raise_layer {
                         bindings = <
 // |---------|---------|---------|---------|---------|---------|----|---------|---------|---------|---------|---------|---------|
@@ -55,5 +120,18 @@
                       &kp LGUI   ___  &kp RET     &kp SPACE   ___  &kp BSPC
                         >;
                 };
-        };
+/*        zmk_layer {
+// -----------------------------------------------------------------------------------------
+// | XXX  | BT 0  | BT 1   | BT 2   | BT 3   | BT 4   |        |       |           |           |      |      |      |
+// |      | BTCLR |        | EP ON  | EP OFF | Reset  |        |       | To SI WIN | To SI WIN |      |      |      |
+// |      |       |        |        |        | Bootl  |        |       |           |           |      |      |      |
+//                         |        |        |        |        |       |           |           |
+            bindings = <
+   xxx &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2     &bt BT_SEL 3      &bt BT_SEL 4     xxx xxx             xxx             xxx          xxx xxx
+   xxx &bt BT_CLR   xxx          &ext_power EP_ON &ext_power EP_OFF &sys_reset       xxx &to SI_BASE_LIN &to SI_BASE_WIN &to AOE_BASE xxx xxx
+   xxx xxx          xxx          xxx              xxx               &bootloader      xxx xxx             xxx             xxx          xxx xxx
+                                 xxx              xxx               xxx              xxx xxx             xxx
+            >;
+        };*/
+    };
 };
