@@ -14,13 +14,13 @@
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | ¨   |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ;(ø)| '(æ)| //I WANT NORDIC
+// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | Â¨   |
+// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  | ;(Ã¸)| '(Ã¦)| //I WANT NORDIC
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  -  | ESC |
 //                    | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y     &kp U  &kp I     &kp O   &kp P     &kp ¨
+   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y     &kp U  &kp I     &kp O   &kp P     &kp BSPC
    &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H     &kp J  &kp K     &kp L   &kp SEMI  &kp SQT
    &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N     &kp M  &kp COMMA &kp DOT &kp MINUS &kp ESC
                   &kp LGUI &mo 1 &kp RET     &kp SPACE &mo 2 &kp RALT
@@ -28,7 +28,7 @@
                 };
                 lower_layer {
 // |  TAB |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  F9 | F10 | F11 |
-// | BTCLR|  |  |  §  |  ¤  |  ^  |  ~  |   |  Hm | UP  | END |  PU |     | F12 |
+// | BTCLR|  |  |  Â§  |  Â¤  |  ^  |  ~  |   |  Hm | UP  | END |  PU |     | F12 |
 // | SHFT |  <  |  >  | BT1 | BT2 | BT3 |   | LFT | Dwn | RGT |  PD | CNT | ESC |
 //                    | GUI |     | ENT |   | SPC |     | ALT |
 
