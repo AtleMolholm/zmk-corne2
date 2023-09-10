@@ -22,8 +22,8 @@
    &kp LCTRL &kp NO_A  &kp NO_S  &kp NO_D  &kp NO_F  &kp NO_G       &kp NO_H  &kp NO_J  &kp NO_K    &kp NO_L  &kp NO_OSTR &kp NO_AE
 // |    SHFT |   Z     |   X     |   C     |   V     |   B     |    |   N     |   M     |   ,       |   .     |   -       |   RSHFT |
    &kp LSHFT &kp NO_Z  &kp NO_X  &kp NO_C  &kp NO_V  &kp NO_B       &kp NO_N  &kp NO_M  &kp NO_COMM &kp NO_DOT   &kp NO_MINS &kp RSHFT
-//                    |    GUI |       |   ENT |   |    SPC  |       |   BSPC |
-                      &kp LGUI &mo 1 &kp RET     &kp SPACE &mo 2 &kp BSPC
+//                                    |    GUI |  LOW  |   ENT |    |    SPC  |   RSE |   BSPC |
+                                      &kp LGUI &mo 1   &kp RET      &kp SPACE &mo 2   &kp NO_BSLS 
                         >;
                 };
                 lower_layer {
