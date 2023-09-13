@@ -93,9 +93,9 @@
 // |    TAB  |   !     |  "      |   #     |   (     |   )     |    |   =     |   /     |   7     |   8     |    9    |   -     |
    &kp  TAB  &kp EXCL  &kp DQT   &kp HASH  &kp LPAR  &kp RPAR       &kp EQUAL &kp FSLH  &kp N7    &kp N8    &kp  N9   &kp MINUS
 // |    CTRL |   %     |   &     |   @     |   [     |   ]     |    |         |   *     |   4     |   5     |    6    |   +     |
-   &kp LCTRL &kp PRCNT &kp AMPS  &kp AT    &kp LBKT  &kp RBKT           ___   &kp STAR  &kp N4    &kp N5    &kp  N6   &kp PLUS
+   &kp LCTRL &kp NO_PRCNT &kp NO_AMPS  &kp NO_AT    &kp NO_LBKT  &kp NO_RBKT           xxx   &kp STAR  &kp N4    &kp N5    &kp  N6   &kp PLUS
 // |    SHFT |   ?     |   \     |   '     |   {     |   }     |    |         |   0     |   1     |   2     |    3    |   ,     |
-   &kp LSHFT &kp QMARK &kp BSLH  &kp SQT   &kp LBRC  &kp RBRC           ___   &kp N0    &kp N1    &kp N2    &kp N3    &kp COMMA
+   &kp LSHFT &kp NO_QMARK &kp NO_BSLH  &kp NO_SQT   &kp NO_LBRC  &kp NO_RBRC           xxx   &kp N0    &kp N1    &kp N2    &kp N3    &kp COMMA
 //                    |    GUI |      |   ENT |   |    SPC  |      |   BSPC |
                       &kp LGUI   ___  &kp RET     &kp SPACE   ___  &kp BSPC
                         >;
