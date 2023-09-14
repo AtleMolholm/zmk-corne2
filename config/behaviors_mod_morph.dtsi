@@ -15,6 +15,6 @@ no_fslh: no-slash-lt {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_SLASH_LT";
   #binding-cells = <0>;
-  bindings = <&kp FSLH>, <&kp NO_LT>;
+  bindings = <&kp NO_SLSH>, <&kp NO_LT>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
