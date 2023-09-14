@@ -57,6 +57,18 @@
 
 
 / {
+    behaviors {
+        #include "behaviors_mod_morph.dtsi"
+
+        shft_caps: tap_dance_shift_caps_lock_toggle {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAB_DANCE_SHIFT_CAPS_LOCK_TOGGLE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&kp CAPS>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
                 default_layer {	
