@@ -18,12 +18,3 @@ no_fslh: no-slash-lt {
   bindings = <&kp NO_SLSH>, <&kp NO_LABK>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
-
-// - >
-no_minus: no-minus-gt {
-  compatible = "zmk,behavior-mod-morph";
-  label = "NO_MINUS_GT";
-  #binding-cells = <0>;
-  bindings = <&kp NO_MINS>, <&kp NO_RABK>;
-  mods = <(MOD_LSFT|MOD_RSFT)>;
-};
