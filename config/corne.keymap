@@ -57,7 +57,9 @@
 
 
 / {
-
+    behaviors {
+        #include "behaviors_mod_morph.dtsi"
+    };
 
     keymap {
         compatible = "zmk,keymap";
