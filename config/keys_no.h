@@ -127,14 +127,14 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 // Row 1 AltGr
-#define NO_AT    ALGR(NO_2)    // @
-#define NO_POUND ALGR(NO_3)    // £
-#define NO_DLLR  ALGR(NO_4)    // $
-#define NO_EURO  ALGR(NO_5)    // €
-#define NO_LBRC  ALGR(NO_7)    // {
-#define NO_LBKT  ALGR(NO_8)    // [
-#define NO_RBKT  ALGR(NO_9)    // ]
-#define NO_RBRC  ALGR(NO_0)    // }
-#define NO_ACUT  ALGR(NO_BSLS) // ´ (dead)
+#define NO_AT    RA(NO_2)    // @
+#define NO_POUND RA(NO_3)    // £
+#define NO_DLLR  RA(NO_4)    // $
+#define NO_EURO  RA(NO_5)    // €
+#define NO_LBRC  RA(NO_7)    // {
+#define NO_LBKT  RA(NO_8)    // [
+#define NO_RBKT  RA(NO_9)    // ]
+#define NO_RBRC  RA(NO_0)    // }
+#define NO_ACUT  RA(NO_BSLS) // ´ (dead)
 // Row 2 (only AltGr)
-#define NO_TILD ALGR(NO_DIAE) // ~ (dead)
+#define NO_TILD RA(NO_DIAE) // ~ (dead)
