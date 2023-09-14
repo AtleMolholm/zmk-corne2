@@ -1,4 +1,4 @@
-// Behaviors to support US like symbols when host layoust is NO
+// Behaviors to support US like symbols when host layoust is SI
 //salut: bzgec
 
 // + ?
@@ -8,13 +8,22 @@ no_plus: no-plus-qmark {
   #binding-cells = <0>;
   bindings = <&kp NO_PLUS>, <&kp NO_QUES>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
-};
 
+};
 // / <
 no_fslh: no-slash-lt {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_SLASH_LT";
   #binding-cells = <0>;
   bindings = <&kp NO_SLSH>, <&kp NO_LABK>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
+
+// - >
+no_minus: no-minus-gt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "NO_MINUS_GT";
+  #binding-cells = <0>;
+  bindings = <&kp NO_MINS>, <&kp NO_RABK>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
