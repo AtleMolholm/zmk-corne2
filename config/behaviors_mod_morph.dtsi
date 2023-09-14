@@ -24,6 +24,6 @@ no_minus: no-minus-gt {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_MINUS_GT";
   #binding-cells = <0>;
-  bindings = <&kp NO_MINS>, <&kp NO_RABK>;
+  bindings = <&kp MINUS>, <&kp NO_RABK>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
