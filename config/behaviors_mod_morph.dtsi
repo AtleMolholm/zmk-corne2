@@ -9,3 +9,12 @@ no_plus: no-plus-qmark {
   bindings = <&kp NO_PLUS>, <&kp QMARK>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
+
+// / <
+no_fslh: no-slash-lt {
+  compatible = "zmk,behavior-mod-morph";
+  label = "NO_SLASH_LT";
+  #binding-cells = <0>;
+  bindings = <&kp NO_FSLH>, <&kp NO_LT>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
