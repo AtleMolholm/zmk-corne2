@@ -15,7 +15,7 @@ no_comma: no-comma-lt {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_COMMA_LT";
   #binding-cells = <0>;
-  bindings = <&kp NO_COMMA>, <&kp NO_LT>;
+  bindings = <&kp COMMA>, <&kp LT>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
@@ -24,6 +24,6 @@ no_dot: no-dot-gt {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_DOT_GT";
   #binding-cells = <0>;
-  bindings = <&kp NO_DOT>, <&kp NO_GT>;
+  bindings = <&kp DOT>, <&kp GT>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
