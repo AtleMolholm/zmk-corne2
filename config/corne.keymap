@@ -44,7 +44,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include "keys_no.h"
-#include "behaviors_mod_morph.dtsi"
 
 #define xxx &none
 #define ___ &trans
