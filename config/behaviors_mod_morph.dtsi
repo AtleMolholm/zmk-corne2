@@ -6,7 +6,7 @@ no_plus: no-plus-qmark {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_PLUS_QMARK";
   #binding-cells = <0>;
-  bindings = <&kp NO_PLUS>, <&kp NO_QMARK>;
+  bindings = <&kp PLUS>, <&kp QMARK>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
