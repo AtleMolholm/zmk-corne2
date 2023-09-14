@@ -10,7 +10,7 @@ no_plus: no-plus-qmark {
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
-// , <
+// / <
 no_fslh: no-slash-lt {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_SLASH_LT";
