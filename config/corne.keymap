@@ -102,7 +102,7 @@
 // |    TAB  |   x     |   UP      |   x       |   (     |   )     |    |   + ?   |   / <     |   7 /   |   8     |    9    |   - >   |
    &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &no_plus  &no_fslh    &kp N7    &kp KP_N8 &kp KP_N9    xxx
 // |    CTRL |   LEFT  |   DOWN    |   RIGHT   |   [     |   ]     |    |         |   *       |   4 ¤   |   5 %   |    6 &  |   +     |
-   &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT      xxx   &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp PLUS
+   &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT      xxx   &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS
 // |    SHFT |   x     |   \       |   '       |   {     |   }     |    |         |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |
    &kp LSHFT    xxx    &kp NO_BSLS &kp APOS    &kp NO_LBRC &kp NO_RBRC      xxx   &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA
 //                                     |    GUI |      |   ENT |    |    SPC  |      |   BSPC |
