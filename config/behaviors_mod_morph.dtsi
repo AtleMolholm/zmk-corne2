@@ -20,9 +20,9 @@ no_fslh: no-slash-lt {
 };
 
 // / \
-no_fslh: no-slash-backslash {
+no_fbsl: no-slash-bsls {
   compatible = "zmk,behavior-mod-morph";
-  label = "NO_SLASH_BSLH";
+  label = "NO_SLASH_BSLS";
   #binding-cells = <0>;
   bindings = <&kp NO_SLSH>, <&kp NO_BSLS>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
