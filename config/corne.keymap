@@ -93,7 +93,7 @@
    &bt BT_CLR &kp NO_PIPE  &kp GRAVE &kp DLLR  &kp CARET &kp TILDE             xxx    &kp INS   &kp HOME  &kp PG_UP &kp PSCRN   &kp F12
 // |   SHFT   |   <     |   >     |   BT1   |   BT2   |   BT3   |        |         |   DEL   |   END   |   PDw   |   CNT     |   ESC   |
 // ;:
-   &kp LSHFT  &kp NO_LABK &kp NO_GT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    xxx    &kp DEL   &kp END   &kp PG_DN &kp K_CMENU &kp ESC
+   &kp LSHFT  &kp NO_LABK &kp GT &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2    xxx    &kp DEL   &kp END   &kp PG_DN &kp K_CMENU &kp ESC
 //                    |    GUI |      |   ENT |   |    SPC  |      |   BSPC |
                       &kp LGUI   ___  &kp RET     &kp SPACE   ___  &kp BSPC
                         >;
