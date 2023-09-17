@@ -24,6 +24,6 @@ no_bsdl: no-bspc-del {
   compatible = "zmk,behavior-mod-morph";
   label = "NO_BSPC-DEL";
   #binding-cells = <0>;
-  bindings = <&kp NO_BSPC>, <&kp NO_DEL>;
+  bindings = <&kp BSPC>, <&kp DEL>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
