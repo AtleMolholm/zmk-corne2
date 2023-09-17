@@ -80,7 +80,7 @@
 // |    SHFT |   Z     |   X     |   C     |   V     |   B     |    |   N     |   M     |   , ;     |   . :   |   - _     |   RSHFT |
    &kp LSHFT &kp NO_Z  &kp NO_X  &kp NO_C  &kp NO_V  &kp NO_B       &kp NO_N  &kp NO_M  &kp NO_COMM &kp NO_DOT   &kp NO_MINS &kp RSHFT
 //                                    |    GUI |       |   ENT |    |    SPC  |       |   BSPC |
-                                      &kp LGUI &mo 1   &kp RET      &kp SPACE &mo 2   &kp BSPC
+                                      &kp LGUI &mo 1   &kp RET      &kp SPACE &mo 2   &no_bsdl
                         >;
                 };
                 lower_layer {
@@ -95,7 +95,7 @@
 // ;:
    &kp LSHFT  &kp NO_LABK  xxx  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2      xxx     &kp DEL   &kp END   &kp PG_DN &kp K_CMENU &kp ESC
 //                                      |    GUI |      |   ENT |        |    SPC  |      |   BSPC |
-                                        &kp LGUI   ___  &kp RET          &kp SPACE   ___  &kp BSPC
+                                        &kp LGUI   ___  &kp RET          &kp SPACE   ___  &no_bsdl
                         >;
                 };
                 raise_layer {
@@ -108,7 +108,7 @@
 // |    SHFT |   x     |   \       |   '       |   {     |   }     |    |         |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |
    &kp LSHFT    xxx    &kp NO_BSLS &kp NO_QUOT &kp NO_LBRC &kp NO_RBRC      xxx   &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA
 //                                     |    GUI |      |   ENT |    |    SPC  |      |   BSPC |
-                                       &kp LGUI   ___  &kp RET      &kp SPACE   ___  &kp BSPC
+                                       &kp LGUI   ___  &kp RET      &kp SPACE   ___  &no_bsdl
                         >;
                 };
 
