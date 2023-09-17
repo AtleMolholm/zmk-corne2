@@ -18,3 +18,12 @@ no_fslh: no-slash-lt {
   bindings = <&kp NO_SLSH>, <&kp NO_LABK>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
+
+// / <
+no_bsdl: no-bspc-del {
+  compatible = "zmk,behavior-mod-morph";
+  label = "NO_BSPC-DEL";
+  #binding-cells = <0>;
+  bindings = <&kp NO_BSPC>, <&kp NO_DEL>;
+  mods = <(MOD_LSFT|MOD_RSFT)>;
+};
