@@ -112,7 +112,7 @@
                         bindings = <
 // |---------|---------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
 // |    TAB  |   x     |   UP      |   x       |   (     |   )     |    |   + ?   |   / <     |   7 /   |   8     |    9    |   -   |
-   &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &no_plus  &no_fslh    &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT
+   &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &no_plus      xxx     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT
 // |    CTRL |   LEFT  |   DOWN    |   RIGHT   |   [     |   ]     |    |         |   *       |   4 ¤   |   5 %   |    6 &  |   +     |
    &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT      xxx   &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS
 // |    SHFT |   x     |   \       |   '       |   {     |   }     |    |         |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |
