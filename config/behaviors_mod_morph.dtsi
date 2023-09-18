@@ -10,12 +10,12 @@ no_plus: no-plus-qmark {
   mods = <(MOD_LSFT|MOD_RSFT)>;
 
 };
-// / <
-no_fslh: no-slash-lt {
+// / \
+no_fslh: no-slash-bsls {
   compatible = "zmk,behavior-mod-morph";
-  label = "NO_SLASH_LT";
+  label = "NO_SLASH_BSLS";
   #binding-cells = <0>;
-  bindings = <&kp NO_SLSH>, <&kp NO_LABK>;
+  bindings = <&kp NO_SLSH>, <&kp NO_BSLS>;
   mods = <(MOD_LSFT|MOD_RSFT)>;
 };
 
