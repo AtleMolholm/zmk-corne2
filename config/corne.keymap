@@ -56,6 +56,18 @@
 
 
 / {
+    macros {
+        sh_gt: sg_gt {
+            label = "SH_gt";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp NO_LABK>
+                , <&macro_release &kp LSHFT>
+                ;
+        };
+    };
     behaviors {
         #include "behaviors_mod_morph.dtsi"
 
@@ -107,12 +119,12 @@
 // |---------_|---------|---------|---------|---------|---------|----_---|---------|---------|---------|---------|---------_-|---------|
 // |   TAB    |   F1    |   F2    |   F3    |   F4    |   F5    |        |   F6    |   F7    |   F8    |   F9    |   F10     |   F11   |
    &kp TAB    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp F11
-// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |        |         |   INS   |   HM    |   PUp   |   PrS     |   F12   |
+// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |        |    x	    |   INS   |   HM    |   PUp   |   PrS     |   F12   |
 //  ||¤&§
    &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &kp CARET &kp NO_TILD    xxx    &kp INS   &kp HOME  &kp PG_UP &kp PSCRN   &kp F12
-// |   SHFT   |   <>    | BTCLR   |   BT1   |   BT2   |   BT3   |        |    x     |   DEL   |   END   |   PDw   |   CNT     |   ESC   |
+// |   SHFT   |   x     | BTCLR   |   BT1   |   BT2   |   BT3   |        |    x     |   DEL   |   END   |   PDw   |   CNT     |   ESC   |
 // ;:
-   &kp LSHFT  &kp NO_LABK &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2      xxx     &kp DEL   &kp END   &kp PG_DN &kp K_CMENU &kp ESC
+   &kp LSHFT     xxx    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2      xxx     &kp DEL   &kp END   &kp PG_DN &kp K_CMENU &kp ESC
 //                                      |    GUI |      |   ENT |        |    SPC  |      |   BSPC |
                                         &kp LGUI   ___  &kp RET          &kp SPACE   ___  &no_bsdl
                         >;
@@ -120,14 +132,14 @@
                 raise_layer {
                         bindings = <
 // |---------|---------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
-// |    TAB  |   x     |   UP      |   x       |   (     |   )     |    |   + ?   |   / <     |   7 /   |   8     |    9    |   -   |
-   &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &no_plus      xxx     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT
+// |    TAB  |   x     |   UP      |   x       |   (     |   )     |    |   + ?   |   \       |   7 /   |   8     |    9    |   -     |
+   &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &no_plus  &kp NO_BSLS &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT
 // |    CTRL |   LEFT  |   DOWN    |   RIGHT   |   [     |   ]     |    |         |   *       |   4 ¤   |   5 %   |    6 &  |   +     |
    &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT      xxx   &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS
-// |    SHFT |   x     |   \       |   '       |   {     |   }     |    |         |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |
-   &kp LSHFT    xxx    &kp NO_BSLS &kp NO_QUOT &kp NO_LBRC &kp NO_RBRC      xxx   &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA
-//                                     |    GUI |      |   ENT |    |    SPC  |      |   BSPC |
-                                       &kp LGUI   ___  &kp RET      &kp SPACE   ___  &no_bsdl
+// |    SHFT |   x     |   <       |   >       |   {     |   }     |    |         |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |
+   &kp LSHFT    xxx    &kp NO_LABK &sh_gt      &kp NO_LBRC &kp NO_RBRC      xxx   &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA
+//                                     |   GUI |      |   ENT |    |    SPC  |      |   BSPC |
+                                       &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
                         >;
                 };
 
