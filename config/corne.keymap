@@ -97,6 +97,12 @@
             layers = <0>;
             bindings = <&kp ESC>;
         };
+	combo_cmenu {
+            timeout-ms = <50>;
+            key-positions = <33 34>;
+            layers = <0>;
+            bindings = <&kp K_CMENU>;
+        };
     };
 
     keymap {
@@ -104,11 +110,11 @@
                 default_layer {	
                         bindings = <
 // |---------|---------|---------|---------|---------|---------|----|---------|---------|--------__-|---------|--------__-|---------|
-// |   TAB   |   Q     |   W     |   E     |   R     |   T     |    |   Y     |   U     |   I       |   O     |   P       |   Å     |
+// |   TAB   |   Q   <ESC>  W     |   E     |   R     |   T     |    |   Y     |   U     |   I       |   O     |   P       |   Å     |
    &kp TAB   &kp NO_Q  &kp NO_W  &kp NO_E  &kp NO_R  &kp NO_T       &kp NO_Y  &kp NO_U  &kp NO_I    &kp NO_O  &kp NO_P    &kp NO_ARNG
 // |    CTRL |   A     |   S     |   D     |   F     |   G     |    |   H     |   J     |   K       |   L     |   Ø       |   Æ     |
    &kp LCTRL &kp NO_A  &kp NO_S  &kp NO_D  &kp NO_F  &kp NO_G       &kp NO_H  &kp NO_J  &kp NO_K    &kp NO_L  &kp NO_OSTR &kp NO_AE
-// |    SHFT |   Z     |   X     |   C     |   V     |   B     |    |   N     |   M     |   , ;     |   . :   |   - _     |   RSHFT |
+// |    SHFT |   Z     |   X     |   C     |   V     |   B     |    |   N     |   M     |   , ;     |   . : <CMENU> - _     |   RSHFT |
    &kp LSHFT &kp NO_Z  &kp NO_X  &kp NO_C  &kp NO_V  &kp NO_B       &kp NO_N  &kp NO_M  &kp NO_COMM &kp NO_DOT   &kp NO_MINS &kp RSHFT
 //                                    |    GUI |       |   ENT |    |    SPC  |                |   BSPC |
                                       &kp LGUI &mo 1   &kp RET      &kp SPACE &kp_tog RALT 2   &no_bsdl
