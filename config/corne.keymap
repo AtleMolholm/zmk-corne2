@@ -122,28 +122,27 @@
                 };
                 lower_layer {
                         bindings = <
-// |---------_|---------|---------|---------|---------|---------|----_---|---------|---------|---------|---------|---------_-|---------|
-// |   TAB    |   F1    |   F2    |   F3    |   F4    |   F5    |        |   F6    |   F7    |   F8    |   F9    |   F10     |   F11   |
-   &kp TAB    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp F11
-// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |        |    x	    |   INS   |   HM    |   PUp   |   PrS     |   F12   |
+// |---------_|---------|---------|---------|---------|---------|----_____---|---------|---------|---------|---------|---------_-|---------|
+// |   TAB    |   F1    |   F2    |   F3    |   F4    |   F5    |            |   F6    |   F7    |   F8    |   F9    |   F10     |   F11   |
+   &kp TAB    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp F11
+// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS     |   x     |   F12   |
 //  ||¤&§
-   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &kp CARET &kp NO_TILD    xxx    &kp INS   &kp HOME  &kp PG_UP &kp PSCRN   &kp F12
-// |   SHFT   |   x     | BTCLR   |   BT1   |   BT2   |   BT3   |        |    x     |   DEL   |   END   |   PDw   |   CNT     |   ESC   |
-// ;:
-   &kp LSHFT     xxx    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2      xxx     &kp DEL   &kp END   &kp PG_DN &kp K_CMENU &kp ESC
-//                                      |    GUI |      |   ENT |        |    SPC  |      |   BSPC |
-                                        &kp LGUI   ___  &kp RET          &kp SPACE   ___  &no_bsdl
+   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &kp CARET &kp NO_TILD         &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx    &kp F12    
+// |   SHFT   | BTCLR   |   BT1   |   BT2   |   BT3   |   BT4     |          |   DEL   |   END   |   PDw   |    x     |    x    |   x     |
+   &kp LSHFT  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp DEL   &kp END   &kp PG_DN      xxx        xxx      xxx     
+//                                      |    GUI |      |   ENT |            |    SPC  |      |   BSPC |
+                                        &kp LGUI   ___  &kp RET              &kp SPACE   ___  &no_bsdl
                         >;
                 };
                 raise_layer {
                         bindings = <
 // |---------|---------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
-// |    TAB  |   x     |   UP      |   x       |   (     |   )     |    |   + ?   |   \       |   7 /   |   8     |    9    |   -     |
-   &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &no_plus  &kp NO_BSLS &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT
-// |    CTRL |   LEFT  |   DOWN    |   RIGHT   |   [     |   ]     |    |         |   *       |   4 ¤   |   5 %   |    6 &  |   +     |
-   &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT      xxx   &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS
-// |    SHFT |   x     |   <       |   >       |   {     |   }     |    |         |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |
-   &kp LSHFT    xxx    &kp NO_LABK &sh_gt      &kp NO_LBRC &kp NO_RBRC      xxx   &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA
+// |    TAB  |   x     |   UP      |   x       |   (     |   )     |    |   \       |   7 /   |   8     |    9    |   -     |   + ?   |
+   &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &kp NO_BSLS &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT &no_plus  
+// |    CTRL |   LEFT  |   DOWN    |   RIGHT   |   [     |   ]     |    |   *       |   4 ¤   |   5 %   |    6 &  |   +     |    x    |
+   &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT  &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS xxx
+// |    SHFT |   x     |   <       |   >       |   {     |   }     |    |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |    x    |
+   &kp LSHFT    xxx    &kp NO_LABK &sh_gt      &kp NO_LBRC &kp NO_RBRC  &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA     xxx
 //                                     |   GUI |      |   ENT |    |    SPC  |      |   BSPC |
                                        &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
                         >;
