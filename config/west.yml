@@ -1,11 +1,11 @@
 manifest:
   remotes:
-    - name: AtleMolholm
-      url-base: https://github.com/AtleMolholm
+    - name: zmkfirmware
+      url-base: https://github.com/ftc/     # <--- CHANGE REPO
   projects:
     - name: zmk
-      remote: AtleMolholm
-      revision: main
+      remote: zmkfirmware
+      revision: mouse-ftc                   # <--- CHANGE REVISION
       import: app/west.yml
   self:
     path: config
