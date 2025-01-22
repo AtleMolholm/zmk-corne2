@@ -121,13 +121,13 @@
                 default_layer {	
                         bindings = <
 // |---------|---------|---------|---------|---------|---------|----|---------|---------|--------__-|---------|--------__-|---------|
-// |   TAB   |   Q   <ESC>  W     |   E     |   R     |   T     |    |   Y     |   U     |   I       |   O     |   P       |   Å     |
+// |   TAB   |   Q   <ESC>  W    |   E     |   R     |   T     |    |   Y     |   U     |   I       |   O     |   P       |   Å     |
    &kp TAB   &kp NO_Q  &kp NO_W  &kp NO_E  &kp NO_R  &kp NO_T       &kp NO_Y  &kp NO_U  &kp NO_I    &kp NO_O  <?> &kp NO_P    &kp NO_ARNG
-// |    CTRL |   A     |   S     |   D     |   F     |   G     |    |   H     |   J     |   K       |   L     <SQT>  Ø     |  Æ     |
+// |    CTRL |   A     |   S     |   D     |   F     |   G     |    |   H     |   J     |   K       |   L    <SQT>  Ø     |   Æ     |
    &kp LCTRL &kp NO_A  &kp NO_S  &kp NO_D  &kp NO_F  &kp NO_G       &kp NO_H  &kp NO_J  &kp NO_K    &kp NO_L  &kp NO_OSTR &kp NO_AE
-// |    SHFT |   Z     |   X     |   C     |   V     |   B     |    |   N     |   M     |   , ;     |   . : <CMENU> - _     |   RSHFT |
+// |    SHFT |   Z     |   X     |   C     |   V     |   B     |    |   N     |   M     |   , ;     |   . : <CMENU> - _   |   RSHFT |
    &kp LSHFT &kp NO_Z  &kp NO_X  &kp NO_C  &kp NO_V  &kp NO_B       &kp NO_N  &kp NO_M  &kp NO_COMM &kp NO_DOT   &kp NO_MINS &kp RSHFT
-//                                    |   GUI  |                |   ENT |    |    SPC  |                |   BSPC |
+//                                    |   GUI  |       |   ENT |    |    SPC  |                |   BSPC |
                                       &kp LGUI &kp_tog LALT 1   &kp RET      &kp SPACE &kp_tog RALT 2   &no_bsdl
                         >;
                 };
@@ -136,10 +136,10 @@
 // |---------_|---------|---------|---------|---------|---------|----_____---|---------|---------|---------|---------|---------_-|---------|
 // |   TAB    |   F1    |   F2    |   F3    |   F4    |   F5    |            |   F6    |   F7    |   F8    |   F9    |   F10     |   F11   |
    &kp TAB    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp F11
-// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS  <SQT> x     |   F12   |
+// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS  <SQT> x      |   F12   |
 //  ||¤&§
-   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &kp CARET &kp NO_TILD         &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx    &kp F12    
-// |   SHFT   | BTCLR   |   BT1   |   BT2   |   BT3   |   BT4     |          |   DEL   |   END   |   PDw   |    x     |    x    |   RSHFT |
+   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &kp CARET &kp NO_TILD         &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx     &kp F12    
+// |   SHFT   | BTCLR   |   BT1   |   BT2   |   BT3   |   BT4     |          |   DEL   |   END   |   PDw   |    x     |    x     |   RSHFT |
    &kp LSHFT  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp DEL   &kp END   &kp PG_DN      xxx        xxx  &kp RSHFT  
 //                                      |    GUI |      |   ENT |            |    SPC  |      |   BSPC |
                                         &kp LGUI   ___  &kp RET              &kp SPACE   ___  &no_bsdl
