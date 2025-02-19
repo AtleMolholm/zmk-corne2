@@ -11,7 +11,7 @@
 #   - board: nice_nano_v2
 #     shield: reviung41
 #
----
+#synced zmk-firmware---
 include:
   - board: nice_nano_v2
     shield: corne_left nice_view
