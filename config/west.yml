@@ -1,10 +1,21 @@
+#manifest:
+#  remotes:
+#    - name: AtleMolholm
+#      url-base: https://github.com/AtleMolholm
+#  projects:
+#    - name: zmk
+#      remote: AtleMolholm
+#      revision: main
+#      import: app/west.yml
+#  self:
+#    path: config
 manifest:
   remotes:
-    - name: AtleMolholm
-      url-base: https://github.com/AtleMolholm
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
   projects:
     - name: zmk
-      remote: AtleMolholm
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
   self:
