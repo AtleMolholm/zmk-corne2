@@ -14,9 +14,9 @@
 #synced ZMK firmware---
 include: #As was for first firmware for typeractive MX board
    - board: nice_nano_v2
-     shield: corne_left #nice_view
+     shield: corne_left nice_view
    - board: nice_nano_v2
-     shield: corne_right #nice_view
+     shield: corne_right nice_view
   
   # TEST
   #- board: nice_nano_v2
