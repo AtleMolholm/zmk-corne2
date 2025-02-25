@@ -70,7 +70,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-		= <&macro_tap &kp NO_CARET>;
+                = <&macro_press &kp LSHFT>
+                , <&macro_tap &kp DIAE>
+                , <&macro_release &kp LSHFT>
 	};
 };
 
