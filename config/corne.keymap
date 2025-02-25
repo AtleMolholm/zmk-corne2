@@ -12,7 +12,7 @@
  * ZMK layer: (note: maybe)
  ***************************************************************************************************
  *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
- *  | XXX    | BT 0   | BT 1   | BT 2   | BT 3   | BT 4   |             |        |        |        |        |        |        |
+ *  |        |        |        |        |        |        |             |        |        |        |        |        |        |
  *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
  *  |        | BT CLR |        | EP ON  | EP OFF | Reset  |             |        | To SI  | To SI  | To AoE |        |        |
  *  |        |        |        |        |        |        |             |        | Linux  | Win    |        |        |        |
@@ -22,8 +22,6 @@
  *                                  |        |        |        |   |        |        |        |
  *                                  +--------+--------+--------+   +--------+--------+--------+
  *
- * - `BT 0-4`: Select the x bluetooth profile
- * - `BT CLR`: Clear bond between the keyboard and the host for the selected profile
  * - `Reset`: Reset this side of the keyboard
  * - `Bootl`: Reset this side of the keyboard to bootloader mode
  * - `EP ON`: Enable external power (enable VCC power output)
@@ -70,9 +68,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LSHFT>
-                , <&macro_tap &kp NO_DIAE>
-                , <&macro_release &kp LSHFT>
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp N9 &kp N4>
+                , <&macro_release &kp LALT>
 	};
 };
 
