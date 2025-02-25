@@ -140,17 +140,17 @@
             layers = <0>;
             bindings = <&kp NO_QUOT>;
         };
+	combo_mouselayer {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            layers = <0>;
+            bindings = <&tog 3>;
+        };
 	combo_cmenu {
             timeout-ms = <50>;
             key-positions = <33 34>;
             layers = <0>;
             bindings = <&kp K_CMENU>;
-        };
-	combo_mouselayer {
-            timeout-ms = <50>;
-            key-positions = <25 26>;
-            layers = <0>;
-            bindings = <&lt 3>;
         };
     };
 
