@@ -55,7 +55,7 @@
 
 / {
     macros {
-        sh_gt: sg_gt {
+        ma_gt: ma_gt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -64,6 +64,15 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
+	ma_dlr: ma_dlr {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N6>
+                , <&macro_release &kp LALT>
+		;
+	};
 	ma_caret: ma_caret {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -160,7 +169,7 @@
    &kp TAB    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp F11
 // | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS  <SQT> x     |   F12   |
 //  ||¤&§
-   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &ma_caret &ma_tilde           &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx    &kp F12    
+   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &ma_dlr  &ma_caret &ma_tilde           &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx    &kp F12    
 // |   SHFT   | BTCLR   |   BT1   |   BT2   |   BT3   |   BT4     |          |   DEL   |   END   |   PDw   |    x     |    x    |   RSHFT |
    &kp LSHFT  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp DEL   &kp END   &kp PG_DN      xxx        xxx  &kp RSHFT  
 //                                      |    GUI |      |   ENT |            |    SPC  |      |   BSPC |
@@ -175,7 +184,7 @@
 // |    CTRL |   LEFT  |   DOWN    |   RIGHT   |   [     |   ]     |    |   *       |   4 ¤   |   5 %   |    6 & <SQT>  +    |    x    |
    &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT  &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS xxx
 // |    SHFT |   x     |   <       |   >       |   {     |   }     |    |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |   RSHFT |
-   &kp LSHFT    xxx    &kp NO_LABK &sh_gt      &kp NO_LBRC &kp NO_RBRC  &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA &kp RSHFT
+   &kp LSHFT    xxx    &kp NO_LABK &ma_gt      &kp NO_LBRC &kp NO_RBRC  &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA &kp RSHFT
 //                                     |   GUI |      |   ENT |    |    SPC  |      |   BSPC |
                                        &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
                         >;
