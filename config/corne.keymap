@@ -41,6 +41,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/pointing.h>
 #include "keys_no.h"
 
 #define xxx &none
@@ -189,6 +190,16 @@
                                        &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
                         >;
                 };
+                extra_layer {
+                        bindings = <
+// |---------|---------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
+   &kp  TAB     xxx    xxx         xxx      xxx xxx                      xxx      &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
+   &kp LCTRL    xxx    xxx         xxx      xxx xxx                      xxx      &mmv MOVE_LEFT xxx             &mmv MOVE_RIGHT xxx   xxx
+   &kp LSHFT    xxx    xxx         xxx      xxx xxx                      xxx      xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
+                                       &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
+                        >;
+                };
+
 
     };
 };
