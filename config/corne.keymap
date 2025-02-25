@@ -149,7 +149,7 @@
 	combo_cmenu {
             timeout-ms = <50>;
             key-positions = <33 34>;
-            layers = <0>;
+            layers = <0 1 2 3>;
             bindings = <&kp K_CMENU>;
         };
     };
