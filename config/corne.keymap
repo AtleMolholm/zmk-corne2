@@ -73,7 +73,7 @@
 	    #binding-cells = <0>;
 	    bindings
 		= <&macro_press &kp NO_LSHFT>
-		, <&macro_press &kp NO_DIAE>
+		, <&macro_tap &kp NO_DIAE>
 		, <&macro_release &kp NO_LSHFT>
 		;
 	};
