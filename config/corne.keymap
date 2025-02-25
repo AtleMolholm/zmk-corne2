@@ -58,7 +58,6 @@
 / {
     macros {
         sh_gt: sg_gt {
-            label = "SH_gt";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -68,12 +67,10 @@
                 ;
         };
 	ma_caret: ma_caret {
-	    label = "MA_caret";
-	    compatible = "zmk, behavior-macro";
-	    #binding-cells = <0>;
-	    bindings
-		= <&macro_tap &kp CARET>
-		;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+		= <&macro_tap &kp CARET>;
 	};
 };
 
@@ -90,7 +87,6 @@
 
         kp_tog: behavior_kp_tog {
             compatible = "zmk,behavior-hold-tap";
-            label = "kp_tog";
             #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
