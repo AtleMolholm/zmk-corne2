@@ -71,6 +71,7 @@
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N9 &kp KP_N4>
                 , <&macro_release &kp LALT>
+		;
 	};
 };
 
