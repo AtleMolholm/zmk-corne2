@@ -67,7 +67,18 @@
                 , <&macro_release &kp LSHFT>
                 ;
         };
-    };
+	ma_caret: ma_caret {
+	    label = "MA_caret";
+	    compatible = "zmk, behaviour-macro";
+	    #binding-cells = <0>;
+	    bindings
+		= <&macro_press &kp NO_LSHFT>
+		, <&macro_press &kp NO_DIAE>
+		, <&macro_release &kp NO_LSHFT>
+		;
+	};
+};
+
     behaviors {
         #include "behaviors_mod_morph.dtsi"
 
@@ -145,7 +156,7 @@
    &kp TAB    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp F11
 // | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS  <SQT> x     |   F12   |
 //  ||¤&§
-   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &kp CARET &kp NO_TILD         &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx    &kp F12    
+   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &kp DLLR  &ma_caret &kp NO_TILD         &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx    &kp F12    
 // |   SHFT   | BTCLR   |   BT1   |   BT2   |   BT3   |   BT4     |          |   DEL   |   END   |   PDw   |    x     |    x    |   RSHFT |
    &kp LSHFT  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp DEL   &kp END   &kp PG_DN      xxx        xxx  &kp RSHFT  
 //                                      |    GUI |      |   ENT |            |    SPC  |      |   BSPC |
