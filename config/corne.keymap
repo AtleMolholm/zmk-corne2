@@ -72,9 +72,9 @@
 	    compatible = "zmk, behavior-macro";
 	    #binding-cells = <0>;
 	    bindings
-		= <&macro_press &kp NO_LSHFT>
+		= <&macro_press &kp LSHFT>
 		, <&macro_tap &kp NO_DIAE>
-		, <&macro_release &kp NO_LSHFT>
+		, <&macro_release &kp LSHFT>
 		;
 	};
 };
