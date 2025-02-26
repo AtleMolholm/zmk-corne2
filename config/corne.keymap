@@ -143,7 +143,7 @@
 	combo_mouselayer {
             timeout-ms = <50>;
             key-positions = <25 26>;
-            layers = <0>;
+            layers = <0 1 2 3>;
             bindings = <&tog 3>;
         };
 	combo_cmenu {
