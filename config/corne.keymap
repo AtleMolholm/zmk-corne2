@@ -158,50 +158,49 @@
         compatible = "zmk,keymap";
                 default_layer {	
                         bindings = <
-// |---------|---------|---------|---------|---------|---------|----|---------|---------|--------__-|---------|--------__-|---------|
+// |---------|---------|---------|---------|---------|----------|----|---------|---------|--------__-|---------|--------__-|---------|
 // |   TAB   |   Q   <ESC>  W     |   E     |   R     |   T     |    |   Y     |   U     |   I      |   O    <?>   P       |   Å     |
-   &kp TAB   &kp NO_Q  &kp NO_W  &kp NO_E  &kp NO_R  &kp NO_T       &kp NO_Y  &kp NO_U  &kp NO_I    &kp NO_O   &kp NO_P    &kp NO_ARNG
 // |    CTRL |   A   <CAPS> S     |   D     |   F     |   G     |    |   H     |   J     |   K       |   L     <SQT>  Ø     |  Æ     |
-   &kp LCTRL &kp NO_A  &kp NO_S  &kp NO_D  &kp NO_F  &kp NO_G       &kp NO_H  &kp NO_J  &kp NO_K    &kp NO_L  &kp NO_OSTR &kp NO_AE
 // |    SHFT |   Z   <MUS>  X     |   C     |   V     |   B     |    |   N     |   M     |   , ;     |   . : <CMENU> - _     |   RSHFT |
-   &kp LSHFT &kp NO_Z  &kp NO_X  &kp NO_C  &kp NO_V  &kp NO_B       &kp NO_N  &kp NO_M  &kp NO_COMM &kp NO_DOT   &kp NO_MINS &kp RSHFT
 //                                    |   GUI  |                |   ENT |    |    SPC  |                |   BSPC |
-                                      &kp LGUI &kp_tog LALT 1   &kp RET      &kp SPACE &kp_tog RALT 2   &no_bsdl
+   &kp TAB   &kp NO_Q  &kp NO_W  &kp NO_E  &kp NO_R  &kp NO_T       &kp NO_Y  &kp NO_U  &kp NO_I    &kp NO_O   &kp NO_P    &kp NO_ARNG
+   &kp LCTRL &kp NO_A  &kp NO_S  &kp NO_D  &kp NO_F  &kp NO_G       &kp NO_H  &kp NO_J  &kp NO_K    &kp NO_L   &kp NO_OSTR &kp NO_AE
+   &kp LSHFT &kp NO_Z  &kp NO_X  &kp NO_C  &kp NO_V  &kp NO_B       &kp NO_N  &kp NO_M  &kp NO_COMM &kp NO_DOT &kp NO_MINS &kp RSHFT
+                                 &kp LGUI  &kp_tog LALT 1 &kp RET   &kp SPACE &kp_tog RALT 2   &no_bsdl
                         >;
                 };
                 lower_layer {
                         bindings = <
-// |---------_|---------|---------|---------|---------|---------|----_____---|---------|---------|---------|---------|---------_-|---------|
-// |   TAB    |   F1    |   F2    |   F3    |   F4    |   F5    |            |   F6    |   F7    |   F8    |   F9    |   F10     |   F11   |
-   &kp TAB    &kp F1    &kp F2    &kp F3    &kp F4    &kp F5                 &kp F6    &kp F7    &kp F8    &kp F9    &kp F10     &kp F11
-// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS  <SQT> x     |   F12   |
-//  ||¤&§
-   &kp LCTRL  &kp NO_PIPE &kp NO_GRV &ma_dlr  &ma_caret &ma_tilde           &kp INS   &kp HOME  &kp PG_UP &kp PSCRN      xxx    &kp F12    
-// |   SHFT   | BTCLR   |   BT1   |   BT2   |   BT3   |   BT4     |          |   DEL   |   END   |   PDw   |    x     |    x    |   RSHFT |
-   &kp LSHFT  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &kp DEL   &kp END   &kp PG_DN      xxx        xxx  &kp RSHFT  
+// |---------_|---------|---------|---------|---------|---------|----_____---|---------|---------|---------|---------|---------|---------|
+// |   TAB    |   F1    |   F2    |   F3    |   F4    |   F5    |            |   F6    |   F7    |   F8    |   F9    |   F10   |   F11   |
+// | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS  <SQT> x    |   F12   |
+// |   SHFT   | BTCLR   |   BT1   |   BT2   |   BT3   |   BT4   |            |   DEL   |   END   |   PDw   |    x    |    x    |   RSHFT |
 //                                      |    GUI |      |   ENT |            |    SPC  |      |   BSPC |
-                                        &kp LGUI   ___  &kp RET              &kp SPACE   ___  &no_bsdl
+   &kp TAB    &kp F1      &kp F2       &kp F3       &kp F4       &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &kp F11
+   &kp LCTRL  &kp NO_PIPE &kp NO_GRV   &ma_dlr      &ma_caret    &ma_tilde          &kp INS   &kp HOME  &kp PG_UP &kp PSCRN xxx      &kp F12    
+   &kp LSHFT  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3       &kp DEL   &kp END   &kp PG_DN xxx       xxx      &kp RSHFT  
+                                       &kp LGUI     ___          &kp RET            &kp SPACE ___       &no_bsdl
                         >;
                 };
                 raise_layer {
                         bindings = <
-// |---------|---------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
-// |    TAB  |   x     |   UP      |   x       |   (     |   )     |    |   \       |   7 /   |   8     |    9    |   -     |   + ?   |
-   &kp  TAB     xxx    &kp UP         xxx      &kp NO_LPRN &kp NO_RPRN  &kp NO_BSLS &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT &no_plus  
-// |    CTRL |   LEFT  |   DOWN    |   RIGHT   |   [     |   ]     |    |   *       |   4 ¤   |   5 %   |    6 & <SQT>  +    |    x    |
-   &kp LCTRL &kp LEFT  &kp DOWN    &kp RIGHT   &kp NO_LBKT &kp NO_RBKT  &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS xxx
-// |    SHFT |   x     |   <       |   >       |   {     |   }     |    |   0 =     |   1 !   |   2 "   |    3 #  |   ,     |   RSHFT |
-   &kp LSHFT    xxx    &kp NO_LABK &ma_gt      &kp NO_LBRC &kp NO_RBRC  &kp N0      &kp N1    &kp N2    &kp N3    &kp COMMA &kp RSHFT
-//                                     |   GUI |      |   ENT |    |    SPC  |      |   BSPC |
-                                       &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
+// |---------|---------|--------__-|--------__-|---------|---------|****|---------|--------_|---------|---------|---------|---------|
+// |    TAB  |   x     |    x      |    x      |   (     |   )     |    |   \     |   7 /   |   8     |    9    |   -     |   + ?   |
+// |    CTRL |   x     |    x      |    x      |   [     |   ]     |    |   *     |   4 ¤   |   5 %   |    6 & <SQT> +    |   x     |
+// |    SHFT |   x     |    <      |    >      |   {     |   }     |    |   0 =   |   1 !   |   2 "   |    3 #  |   ,     |   RSHFT |
+//                                 |   GUI     |         |   ENT   |    |   SPC   |         |   BSPC |
+   &kp  TAB     xxx    xxx         xxx     &kp NO_LPRN &kp NO_RPRN      &kp NO_BSLS     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT &no_plus  
+   &kp LCTRL    xxx    xxx         xxx     &kp NO_LBKT &kp NO_RBKT      &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS     xxx
+   &kp LSHFT    xxx    &kp NO_LABK &ma_gt  &kp NO_LBRC &kp NO_RBRC      &kp N0          &kp N1    &kp N2    &kp N3    &kp COMMA       &kp RSHFT
+                                   &kp LGUI    ___     &kp RET          &kp SPACE       ___       &no_bsdl
                         >;
                 };
                 extra_layer {
                         bindings = <
-// |---------|---------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
-   &kp  TAB     xxx    xxx         xxx      xxx xxx                      xxx      &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
-   &kp LCTRL    xxx    xxx         xxx      xxx xxx                      xxx      &mmv MOVE_LEFT xxx             &mmv MOVE_RIGHT xxx   xxx
-   &kp LSHFT    xxx    xxx         xxx      xxx xxx                      xxx      xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
+// |---------|--------------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
+   &kp  TAB     xxx         &kp UP      xxx       xxx xxx                      xxx      &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
+   &kp LCTRL    &kp LEFT    &kp DOWN    &kp RIGHT xxx xxx                      xxx      &mmv MOVE_LEFT &mkp MCLK       &mmv MOVE_RIGHT xxx   xxx
+   &kp LSHFT    xxx         xxx         xxx       xxx xxx                      xxx      xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
                                        &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
                         >;
                 };
