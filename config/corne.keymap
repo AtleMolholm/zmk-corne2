@@ -14,7 +14,7 @@
  *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
  *  |        |        |        |        |        |        |             |        |        |        |        |        |        |
  *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
- *  |        | BT CLR |        | EP ON  | EP OFF | Reset  |             |        | To SI  | To SI  | To AoE |        |        |
+ *  |        |        |        | EP ON  | EP OFF | Reset  |             |        | To SI  | To SI  |        |        |        |
  *  |        |        |        |        |        |        |             |        | Linux  | Win    |        |        |        |
  *  +--------+--------+--------+--------+--------+--------+             +--------+--------+--------+--------+--------+--------+
  *  |        |        |        |        |        | Bootl  |             |        |        |        |        |        |        |
@@ -89,6 +89,24 @@
             bindings
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp KP_N1 &kp KP_N2 &kp KP_N6>
+                , <&macro_release &kp LALT>
+		;
+	};
+	ma_diae: ma_diae {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N1 &kp KP_N6 &kp KP_N8 >
+                , <&macro_release &kp LALT>
+		;
+	};
+	ma_acut: ma_acut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LALT>
+                , <&macro_tap &kp KP_N3 &kp KP_N8 &kp KP_N4 >
                 , <&macro_release &kp LALT>
 		;
 	};
@@ -175,11 +193,10 @@
 // |   TAB    |   F1  <ESC> F2    |   F3    |   F4    |   F5    |            |   F6    |   F7    |   F8    |   F9    |   F10   |   F11   |
 // | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS   |    x    |   F12   |
 // |   SHFT   | BTCLR <MUS> BT1   |   BT2   |   BT3   |   BT4   |            |   DEL   |   END   |   PDw   |    x <CMENU> x    |   RSHFT |
-//                                      |    GUI |      |   ENT |            |    SPC  |      |   BSPC |
    &kp TAB    &kp F1      &kp F2       &kp F3       &kp F4       &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &kp F11
    &kp LCTRL  &kp NO_PIPE &kp NO_GRV   &ma_dlr      &ma_caret    &ma_tilde          &kp INS   &kp HOME  &kp PG_UP &kp PSCRN xxx      &kp F12    
    &kp LSHFT  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3       &kp DEL   &kp END   &kp PG_DN xxx       xxx      &kp RSHFT  
-                                       &kp LGUI     ___          &kp RET            &kp SPACE ___       &no_bsdl
+                                       ___          ___          ___                ___       ___       ___
                         >;
                 };
                 raise_layer {
@@ -188,11 +205,10 @@
 // |    TAB  |   x  <ESC>   x      |    x      |   (     |   )     |    |   \     |   7 /   |   8     |    9    |     -   |   + ?   |
 // |    CTRL |   x     |    x      |    x      |   [     |   ]     |    |   *     |   4 ¤   |   5 %   |    6 &  |     +   |   x     |
 // |    SHFT |   x  <MUS>   <      |    >      |   {     |   }     |    |   0 =   |   1 !   |   2 "   |    3 #<CMENU> ,   |   RSHFT |
-//                                 |   GUI     |         |   ENT   |    |   SPC   |         |   BSPC |
    &kp  TAB     xxx    xxx         xxx     &kp NO_LPRN &kp NO_RPRN      &kp NO_BSLS     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT &no_plus  
    &kp LCTRL    xxx    xxx         xxx     &kp NO_LBKT &kp NO_RBKT      &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS     xxx
    &kp LSHFT    xxx    &kp NO_LABK &ma_gt  &kp NO_LBRC &kp NO_RBRC      &kp N0          &kp N1    &kp N2    &kp N3    &kp COMMA       &kp RSHFT
-                                   &kp LGUI    ___     &kp RET          &kp SPACE       ___       &no_bsdl
+                                   ___     ___         ___              ___             ___       ___
                         >;
                 };
                 extra_layer {
@@ -201,7 +217,7 @@
    &kp  TAB     xxx         &kp UP      xxx       xxx xxx                      xxx      &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
    &kp LCTRL    &kp LEFT    &kp DOWN    &kp RIGHT xxx xxx                      xxx      &mmv MOVE_LEFT &mkp MCLK       &mmv MOVE_RIGHT xxx   xxx
    &kp LSHFT    xxx         xxx         xxx       xxx xxx                      xxx      xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
-                                       &kp LGUI  ___  &kp RET      &kp SPACE   ___  &no_bsdl
+                                        ___       ___ ___                      ___      ___            ___
                         >;
                 };
 
