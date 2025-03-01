@@ -203,23 +203,23 @@
                 };
                 lower_layer {
                         bindings = <
-// |---------_|---------|---------|---------|---------|---------|----_____---|---------|---------|---------|---------|---------|---------|
-// |   TAB    |   F1  <ESC> F2    |   F3    |   F4    |   F5    |            |   F6    |   F7    |   F8    |   F9    |   F10   |   F11   |
-// | LCTRL    |   '|'§  |  ´ `    |   $     |   ¨ ^   |   ~     |            |   INS   |   HM    |   PUp   |   PrS   |    x    |   F12   |
-// |   SHFT   | BTCLR <MUS> BT1   |   BT2   |   BT3   |   BT4   |            |   DEL   |   END   |   PDw   |    x <CMENU> x    |   RSHFT |
-   &kp TAB    &kp F1      &kp F2       &kp F3       &kp F4       &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &kp F11
-   &kp LCTRL  &kp NO_PIPE &acu_gra     &ma_dlr      &dia_car     &ma_tilde          &kp INS   &kp HOME  &kp PG_UP &kp PSCRN xxx      &kp F12    
-   &kp LSHFT  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3       &kp DEL   &kp END   &kp PG_DN xxx       xxx      &kp RSHFT  
+// |---------_|---------|---------|---------|---------|---------|----_____---|---------|---------|---------|---------|-------------------|---------|
+// |   TAB    |   F1  <ESC> F2    |   F3    |   F4    |   F5    |            |   F6    |   F7    |   F8    |   F9    |   F10             |   F11   |
+// | LCTRL    |   '|'§  |  $      |   ´ `   |   ¨ ^   |   ~     |            |   INS   |   HM    |   PUp   |   PrS   |   Pause Break     |   F12   |
+// |   SHFT   | BTCLR <MUS> BT1   |   BT2   |   BT3   |   BT4   |            |   DEL   |   END   |   PDw   |    x <CMENU> Scrl Lck       |   RSHFT |
+   &kp TAB    &kp F1      &kp F2       &kp F3       &kp F4       &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10          &kp F11
+   &kp LCTRL  &kp NO_PIPE &ma_dlr      &acu_gra     &dia_car     &ma_tilde          &kp INS   &kp HOME  &kp PG_UP &kp PSCRN &kp PAUSE_BREAK  &kp F12    
+   &kp LSHFT  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3       &kp DEL   &kp END   &kp PG_DN xxx       &kp SLCK         &kp RSHFT  
                                        ___          ___          ___                ___       ___       ___
                         >;
                 };
                 raise_layer {
                         bindings = <
 // |---------|---------|--------__-|--------__-|---------|---------|****|---------|---------|---------|---------|---------|---------|
-// |    TAB  |   x  <ESC>   x      |    x      |   (     |   )     |    |   \     |   7 /   |   8     |    9    |     -   |   + ?   |
+// |    TAB  |   x  <ESC>   x      |    x      |   (     |   )     |    |   \     |   7 /   |   8     |    9    |     -   |   x     |
 // |    CTRL |   x     |    x      |    x      |   [     |   ]     |    |   *     |   4 ¤   |   5 %   |    6 &  |     +   |   x     |
 // |    SHFT |   x  <MUS>   <      |    >      |   {     |   }     |    |   0 =   |   1 !   |   2 "   |    3 #<CMENU> ,   |   RSHFT |
-   &kp  TAB     xxx    xxx         xxx     &kp NO_LPRN &kp NO_RPRN      &kp NO_BSLS     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT &no_plus  
+   &kp  TAB     xxx    xxx         xxx     &kp NO_LPRN &kp NO_RPRN      &kp NO_BSLS     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT xxx  
    &kp LCTRL    xxx    xxx         xxx     &kp NO_LBKT &kp NO_RBKT      &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS     xxx
    &kp LSHFT    xxx    &kp NO_LABK &ma_gt  &kp NO_LBRC &kp NO_RBRC      &kp N0          &kp N1    &kp N2    &kp N3    &kp COMMA       &kp RSHFT
                                    ___     ___         ___              ___             ___       ___
