@@ -130,6 +130,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&tog>;
         };
+	// ¨ ^
+	dia_car: dia_car {
+	  compatible = "zmk,behavior-mod-morph";
+	  #binding-cells = <0>;
+	  bindings = <ma_diae>, <ma_caret>;
+	  mods = <(MOD_LSFT|MOD_RSFT)>;
+	};
     };
 
     combos {
@@ -194,7 +201,7 @@
 // | LCTRL    |   '|'§  |    `    |   $     |   ^     |   ~     |            |   INS   |   HM    |   PUp   |   PrS   |    x    |   F12   |
 // |   SHFT   | BTCLR <MUS> BT1   |   BT2   |   BT3   |   BT4   |            |   DEL   |   END   |   PDw   |    x <CMENU> x    |   RSHFT |
    &kp TAB    &kp F1      &kp F2       &kp F3       &kp F4       &kp F5             &kp F6    &kp F7    &kp F8    &kp F9    &kp F10  &kp F11
-   &kp LCTRL  &kp NO_PIPE &kp NO_GRV   &ma_dlr      &ma_caret    &ma_tilde          &kp INS   &kp HOME  &kp PG_UP &kp PSCRN xxx      &kp F12    
+   &kp LCTRL  &kp NO_PIPE &kp NO_GRV   &ma_dlr      &dia_car     &ma_tilde          &kp INS   &kp HOME  &kp PG_UP &kp PSCRN xxx      &kp F12    
    &kp LSHFT  &bt BT_CLR  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3       &kp DEL   &kp END   &kp PG_DN xxx       xxx      &kp RSHFT  
                                        ___          ___          ___                ___       ___       ___
                         >;
