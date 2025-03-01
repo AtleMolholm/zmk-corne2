@@ -134,7 +134,7 @@
 	dia_car: dia_car {
 	  compatible = "zmk,behavior-mod-morph";
 	  #binding-cells = <0>;
-	  bindings = <ma_diae>, <ma_caret>;
+	  bindings = <&ma_diae>, <&ma_caret>;
 	  mods = <(MOD_LSFT|MOD_RSFT)>;
 	};
     };
