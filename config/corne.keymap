@@ -216,21 +216,21 @@
                 raise_layer {
                         bindings = <
 // |---------|---------|--------__-|--------__-|---------|---------|****|---------|---------|---------|---------|---------|---------|
-// |    TAB  |   x  <ESC>   x      |    x      |   (     |   )     |    |   \     |   7 /   |   8     |    9    |     -   |   x     |
-// |    CTRL |   x     |    x      |    x      |   [     |   ]     |    |   *     |   4 ¤   |   5 %   |    6 &  |     +   |   x     |
-// |    SHFT |   x  <MUS>   <      |    >      |   {     |   }     |    |   0 =   |   1 !   |   2 "   |    3 #<CMENU> ,   |   RSHFT |
-   &kp  TAB     xxx    xxx         xxx     &kp NO_LPRN &kp NO_RPRN      &kp NO_BSLS     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT xxx  
-   &kp LCTRL    xxx    xxx         xxx     &kp NO_LBKT &kp NO_RBKT      &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS     xxx
-   &kp LSHFT    xxx    &kp NO_LABK &ma_gt  &kp NO_LBRC &kp NO_RBRC      &kp N0          &kp N1    &kp N2    &kp N3    &kp COMMA       &kp RSHFT
+// |    TAB  |   x  <ESC>   x      |    (      |   )     |   x     |    |   \     |   7 /   |   8     |    9    |     -   |   x     |
+// |    CTRL |   x     |    x      |    [      |   ]     |   x     |    |   *     |   4 ¤   |   5 %   |    6 &  |     +   |   x     |
+// |    SHFT |   <  <MUS>   >      |    {      |   }     |   x     |    |   0 =   |   1 !   |   2 "   |    3 #<CMENU> ,   |   RSHFT |
+   &kp  TAB     xxx     xxx        &kp NO_LPRN &kp NO_RPRN   xxx        &kp NO_BSLS     &kp N7    &kp KP_N8 &kp KP_N9 &kp KP_SUBTRACT xxx  
+   &kp LCTRL    xxx     xxx        &kp NO_LBKT &kp NO_RBKT   xxx        &kp KP_MULTIPLY &kp N4    &kp N5    &kp  N6   &kp KP_PLUS     xxx
+   &kp LSHFT    &kp NO_LABK &ma_gt &kp NO_LBRC &kp NO_RBRC   xxx        &kp N0          &kp N1    &kp N2    &kp N3    &kp COMMA       &kp RSHFT
                                    ___     ___         ___              ___             ___       ___
                         >;
                 };
                 extra_layer {
                         bindings = <
 // |---------|--------------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
-   &kp  TAB     xxx         &kp UP      xxx       xxx xxx                      xxx      &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
-   &kp LCTRL    &kp LEFT    &kp DOWN    &kp RIGHT xxx xxx                      xxx      &mmv MOVE_LEFT &mkp MCLK       &mmv MOVE_RIGHT xxx   xxx
-   &kp LSHFT    xxx         xxx         xxx       xxx xxx                      xxx      xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
+   &kp  TAB     xxx   xxx         &kp UP      xxx       xxx                       xxx      &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
+   &kp LCTRL    xxx   &kp LEFT    &kp DOWN    &kp RIGHT xxx                       xxx      &mmv MOVE_LEFT &mkp MCLK       &mmv MOVE_RIGHT xxx   xxx
+   &kp LSHFT    xxx   xxx         xxx         xxx       xxx                       xxx      xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
                                         ___       ___ ___                      ___      ___            ___
                         >;
                 };
