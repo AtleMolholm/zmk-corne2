@@ -228,9 +228,9 @@
                 extra_layer {
                         bindings = <
 // |---------|--------------|--------__-|--------__-|---------|---------|****|---------|--------__-|---------|---------|---------|---------|
-   &kp  TAB     xxx   xxx         &kp UP      xxx       xxx                       xxx      &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
-   &kp LCTRL    xxx   &kp LEFT    &kp DOWN    &kp RIGHT xxx                       xxx      &mmv MOVE_LEFT &mkp MCLK       &mmv MOVE_RIGHT xxx   xxx
-   &kp LSHFT    xxx   xxx         xxx         xxx       xxx                       xxx      xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
+   &kp  TAB     xxx   xxx         &kp UP      xxx       &kp PG_UP       &msc SCR_UP       &mkp LCLK      &mmv MOVE_UP    &mkp RCLK       xxx   xxx
+   &kp LCTRL    xxx   &kp LEFT    &kp DOWN    &kp RIGHT &kp PG_DN       &msc SCR_DOWN     &mmv MOVE_LEFT &mkp MCLK       &mmv MOVE_RIGHT xxx   xxx
+   &kp LSHFT    xxx   xxx         xxx         xxx       xxx             xxx               xxx            &mmv MOVE_DOWN  xxx             xxx   &kp RSHFT
                                         ___       ___ ___                      ___      ___            ___
                         >;
                 };
