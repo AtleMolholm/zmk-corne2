@@ -184,6 +184,12 @@
             layers = <0 1 2 3>;
             bindings = <&kp K_CMENU>;
         };
+	combo_at-sign {
+            timeout-ms = <50>;
+            key-positions = <12 37 32>;
+            layers = <2>;
+            bindings = <&kp AT>;
+        };
     };
 
     keymap {
@@ -238,3 +244,4 @@
 
     };
 };
+
